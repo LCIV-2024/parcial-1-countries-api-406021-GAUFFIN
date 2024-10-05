@@ -1,0 +1,13 @@
+version: '1'
+
+
+services:
+  parcial-micro:
+    build:
+      dockerfile: ./Dockerfile
+
+    image: parcial-app
+    ports:
+      - "8080:8080"
+
+
