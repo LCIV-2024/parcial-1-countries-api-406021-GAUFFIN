@@ -138,7 +138,7 @@ public class CountryService {
 
                 for(Country country: countries){
 
-                        if(country.getBorders().size()>countryWithMostBorders.getBorders().size()){
+                        if(country.getBorders()!=null && countryWithMostBorders.getBorders()!=null && country.getBorders().size()>countryWithMostBorders.getBorders().size()){
                                 countryWithMostBorders = country;
                                   }
                 }
