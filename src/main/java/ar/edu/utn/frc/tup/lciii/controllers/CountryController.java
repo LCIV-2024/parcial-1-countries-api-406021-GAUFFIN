@@ -51,6 +51,14 @@ public class CountryController {
 
     }
 
+    @GetMapping("/most-borders")
+    public ResponseEntity<ReducedCountryDTO> getMostBorders() {
+
+        return ResponseEntity.ok(countryService.getCountryWithmostBorders());
+
+
+    }
+
 
 
 

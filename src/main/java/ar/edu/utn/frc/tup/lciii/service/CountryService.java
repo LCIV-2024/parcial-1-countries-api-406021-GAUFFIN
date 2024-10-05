@@ -129,4 +129,20 @@ public class CountryService {
         }
 
 
+        public ReducedCountryDTO getCountryWithmostBorders() {
+
+                Country countryWithMostBorders = new Country();
+                List<Country> countries = getAllCountries();
+
+                countryWithMostBorders = countries.get(0);
+
+                for(Country country: countries){
+
+                        if(country.getBorders().size()>countryWithMostBorders.getBorders().size()){
+                                countryWithMostBorders = country;
+                                  }
+                }
+
+                return modelMapper.map(countryWithMostBorders, ReducedCountryDTO.class);
+        }
 }
