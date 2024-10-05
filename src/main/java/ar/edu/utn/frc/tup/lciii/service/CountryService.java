@@ -117,6 +117,7 @@ public class CountryService {
                 List<Country> countries = getAllCountries();
 
                 for(Country country: countries){
+
                         if(country.getLanguages()!=null && country.getLanguages().containsValue(languaje)){
                                 countryDTOS.add(modelMapper.map(country, ReducedCountryDTO.class));
                         }
