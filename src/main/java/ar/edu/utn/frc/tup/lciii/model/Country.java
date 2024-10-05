@@ -1,5 +1,6 @@
 package ar.edu.utn.frc.tup.lciii.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -15,6 +16,8 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Country {
+
+
     private String name;
     private long population;
     private double area;
@@ -22,4 +25,5 @@ public class Country {
     private String region;
     private List<String> borders;
     private Map<String, String> languages;
+    private  List<String> continent;
 }
